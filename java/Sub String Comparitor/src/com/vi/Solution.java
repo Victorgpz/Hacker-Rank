@@ -1,10 +1,12 @@
 package com.vi;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashSet;
 
 public class Solution {
-    public static String twoStrings(String s1,String s2){
-        //too slow,failed some test cases
+    public static String twoStrings(@NotNull String s1,@NotNull String s2){
+            //too slow,failed some test cases
 
 //      boolean flag=false;
 //        for (int i=0;i<s1.length();i++){
