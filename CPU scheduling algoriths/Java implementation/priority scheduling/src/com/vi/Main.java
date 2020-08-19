@@ -7,7 +7,7 @@ public class Main {
         Random rn=new Random();
         List<Process> processList=new ArrayList<>();
         for (int i=0;i<11;i++){
-            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(5)));
+            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(10),rn.nextInt(5)));
         }
 
         Collections.sort(processList, new Comparator<Process>() {
