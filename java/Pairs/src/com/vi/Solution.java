@@ -17,6 +17,7 @@ public class Solution {
         }
         return pair;
     }
+    //binary search method
     public static int pair(int k,int[] arr){
         int pair=0;
         int i=0;
