@@ -6,8 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Random rn=new Random();
         List<Process> processList=new ArrayList<>();
+<<<<<<< HEAD
         for (int i=1;i<11;i++){
             processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(3)));
+=======
+        for (int i=0;i<11;i++){
+            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(10),rn.nextInt(5)));
+>>>>>>> master
         }
 
         Collections.sort(processList, new Comparator<Process>() {
@@ -62,5 +67,9 @@ public class Main {
         }
         return avg/=Time.length;
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> master
