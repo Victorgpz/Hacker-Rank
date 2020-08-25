@@ -36,25 +36,19 @@ public class Main {
         for (int i=0;i<list.size();i++){
             System.out.println(list.get(i).getProcessId()+"\t\t\t"+list.get(i).getBurstTime()+"\t\t\t"+waitingTime[i]+"\t\t\t"+turnAroundTime[i]);
         }
-      float averageWaitingTime=AverageWaitingTime(waitingTime);
+      float averageWaitingTime=AverageTime(waitingTime);
       System.out.println("Average waiting time :"+averageWaitingTime);
-      float averageTurnAroundTime=AverageTurnAroundTime(turnAroundTime);
+      float averageTurnAroundTime=AverageTime(turnAroundTime);
       System.out.println("Average turn Around time :"+averageTurnAroundTime);
 
 
     }
-    public static float AverageWaitingTime(int @NotNull [] waitingTime){
+    public static float AverageTime(int @NotNull [] Time){
         float avg=0;
-        for (int i:waitingTime){
+        for (int i:Time){
             avg+=(float)i;
         }
-       return avg/=waitingTime.length;
+       return avg/=Time.length;
     }
-    public static float AverageTurnAroundTime(int @NotNull [] turnAroundTime){
-        float avg=0;
-        for (int i:turnAroundTime){
-            avg+=(float)i;
-        }
-        return avg/=turnAroundTime.length;
-    }
+
 }

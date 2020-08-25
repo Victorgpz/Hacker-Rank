@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Random rn=new Random();
         List<Process> processList=new ArrayList<>();
-        for (int i=0;i<11;i++){
-            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(5)));
+        for (int i=1;i<11;i++){
+            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(3)));
         }
 
         Collections.sort(processList, new Comparator<Process>() {
@@ -48,25 +48,19 @@ public class Main {
         for (int i=0;i<list.size();i++){
             System.out.println(list.get(i).getProcessId()+"\t\t\t"+list.get(i).getPriority()+"\t\t\t"+list.get(i).getBurstTime()+"\t\t\t"+waitingTime[i]+"\t\t\t"+turnAroundTime[i]);
         }
-        float averageWaitingTime=AverageWaitingTime(waitingTime);
+        float averageWaitingTime=AverageTime(waitingTime);
         System.out.println("Average waiting time :"+averageWaitingTime);
-        float averageTurnAroundTime=AverageTurnAroundTime(turnAroundTime);
+        float averageTurnAroundTime=AverageTime(turnAroundTime);
         System.out.println("Average turn Around time :"+averageTurnAroundTime);
 
 
     }
-    public static float AverageWaitingTime(int[] waitingTime){
+    public static float AverageTime(int[] Time){
         float avg=0;
-        for (int i:waitingTime){
+        for (int i:Time){
             avg+=(float)i;
         }
-        return avg/=waitingTime.length;
+        return avg/=Time.length;
     }
-    public static float AverageTurnAroundTime(int[] turnAroundTime){
-        float avg=0;
-        for (int i:turnAroundTime){
-            avg+=(float)i;
-        }
-        return avg/=turnAroundTime.length;
-    }
+
 }

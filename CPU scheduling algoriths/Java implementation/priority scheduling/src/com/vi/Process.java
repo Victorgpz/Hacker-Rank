@@ -1,9 +1,10 @@
 package com.vi;
 
 public class Process {
-    private String processId;
+    private final String processId;
     private int burstTime;
     private final int priority;
+
     public Process(String processId, int burstTime, int priority) {
         this.processId = processId;
         this.burstTime = burstTime;
