@@ -71,8 +71,8 @@ public class Main {
 
     }
 
-   
-    public static int AveragTime(int[] Time){
+
+    public static int AverageTime(int[] Time){
         int avg=0;
         for (int i:Time){
             avg+=(float)i;
@@ -80,6 +80,3 @@ public class Main {
         return avg/=Time.length;
     }
 }
-
-
-
