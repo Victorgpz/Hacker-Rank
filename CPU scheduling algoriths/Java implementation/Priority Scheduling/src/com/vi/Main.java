@@ -1,7 +1,4 @@
 package com.vi;
-
-import com.sun.istack.internal.NotNull;
-
 import java.util.*;
 
 public class Main {
@@ -10,21 +7,22 @@ public class Main {
         Random rn=new Random();
         List<Process> processList=new ArrayList<>();
         for (int i=0;i<11;i++){
-            processList.add(new Process("p"+i,rn.nextInt(10)));
+            processList.add(new Process("p"+i,rn.nextInt(10),rn.nextInt(5)));
         }
 
         Collections.sort(processList, new Comparator<Process>() {
             @Override
             public int compare(Process o1, Process o2) {
-                if(o1.getBurstTime()<o2.getBurstTime()){
+                if(o1.getPriority()<o2.getPriority()){
                     return -1;
-                }else if(o1.getBurstTime()>o2.getBurstTime()){
+                }else if(o1.getPriority()>o2.getPriority()){
                     return 1;
                 }else {
                     return 0;
                 }
             }
         });
+
         int[] waitingTime=waitingTime(processList);
         int[] turnAroundTime=turnAroundTime(processList,waitingTime);
         printList(processList,waitingTime,turnAroundTime);
@@ -46,9 +44,9 @@ public class Main {
         return turnAroundTime;
     }
     public static void printList(List<? extends Process> list, int[] waitingTime, int[] turnAroundTime){
-        System.out.println("Process\tBurst time\tWaiting Time\tTurn around time");
+        System.out.println("Process\tPriority\tBurst time\tWaiting Time\tTurn around time");
         for (int i=0;i<list.size();i++){
-            System.out.println(list.get(i).getProcessId()+"\t\t\t"+list.get(i).getBurstTime()+"\t\t\t"+waitingTime[i]+"\t\t\t"+turnAroundTime[i]);
+            System.out.println(list.get(i).getProcessId()+"\t\t\t"+list.get(i).getPriority()+"\t\t\t"+list.get(i).getBurstTime()+"\t\t\t"+waitingTime[i]+"\t\t\t"+turnAroundTime[i]);
         }
         float averageWaitingTime=AverageWaitingTime(waitingTime);
         System.out.println("Average waiting time :"+averageWaitingTime);
@@ -71,4 +69,4 @@ public class Main {
         }
         return avg/=turnAroundTime.length;
     }
-}
+} 
