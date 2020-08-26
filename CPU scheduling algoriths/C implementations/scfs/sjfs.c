@@ -6,7 +6,7 @@
     printf("Enter number of process:");
     scanf("%d",&n);
   
-    printf("nEnter Burst Time:n");
+    printf("nEnter Burst Time:");
     for(i=0;i<n;i++)
     {
         printf("p%d:",i+1);
@@ -48,7 +48,7 @@
     avg_wt=(float)total/n;      
     total=0;
   
-    printf("nProcesst    Burst Time   Waiting time Turnaround Time\n");
+    printf("Processt    Burst Time   Waiting time Turnaround Time\n");
     for(i=0;i<n;i++)
     {
         turnAroundTime[i]=burstTime[i]+waitingTime[i];   
