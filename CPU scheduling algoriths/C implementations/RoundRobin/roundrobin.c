@@ -21,7 +21,7 @@ int main()
   scanf("%d",&time_quantum); 				//details about the time period allocated for each execution(time quantum)
   printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n"); 
 	
-  for(time=0,count=0;remain!=0;)			//for loop that executes until remaining time is 0 
+  for(time=0,count=0;remain!=0;)			//for loop that executes until remaining process is 0 
   { 
 	  
     if(rt[count]<=time_quantum && rt[count]>0) 		//checks if the curent process time is less than the time quantum and the remaining time is greater than 0 
