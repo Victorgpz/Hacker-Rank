@@ -67,3 +67,6 @@ int main()
  
 	return 0;
 }
+//#include<stdio.h>
+//void main(){
+    //int buffer[10],bufsize=5,in,out,pro,cons,choice;
