@@ -60,3 +60,7 @@
     printf("Average Waiting Time=%f\n",avg_wt);
     printf("Average Turnaround Time=%f",avg_tat);
 }
+
+---------------------------------
+/* printf("\nAverege Waiting Time %d",avwt);
+    printf("\nAverege Turn Around Time %d\n",avtat); */
