@@ -51,4 +51,10 @@ int main()
     int  burst_time[] = {10, 5, 8};  
     findavgTime(processes, n,  burst_time);  
     return 0;  
-}  
+} 
+
+--------
+/*avwt = avwt/n;
+    avtat = avtat/n;
+    printf("\nAverege Waiting Time %d",avwt);
+    printf("\nAverege Turn Around Time %d\n",avtat);*/
