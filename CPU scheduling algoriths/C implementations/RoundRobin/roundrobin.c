@@ -56,3 +56,11 @@ int main()
   
   return 0; 
 }
+
+-------------------------------------------------------------
+//ptint the values
+// avwat=(watat*0.1)/n;
+    //avtat=(tart*0.1)/n;
+    //printf("Average Waiting Time = %d\n",avwat);
+    //printf("Average TurnaroundTime = %d\n",avtat);
+//}
