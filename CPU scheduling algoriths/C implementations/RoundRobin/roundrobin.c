@@ -58,7 +58,7 @@ int main()
 }
 
 -------------------------------------------------------------
-//ptint the values
+//print the values
 // avwat=(watat*0.1)/n;
     //avtat=(tart*0.1)/n;
     //printf("Average Waiting Time = %d\n",avwat);
