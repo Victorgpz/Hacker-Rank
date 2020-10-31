@@ -1,4 +1,4 @@
-/* 22.a */
+/* 21.a binary search*/
 #include <stdio.h>
 
 int binarySearch(int[],int);
@@ -27,7 +27,7 @@ int main(){
     
     
 }
-
+// recursive function for binary search
 int binarySearch(int arr[],int r,int l,int x){
      if (r >= l) { 
         int mid = l + (r - l) / 2; 
