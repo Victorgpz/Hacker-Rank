@@ -12,7 +12,7 @@ int main(){
     struct student students[100],temp[100];
     int size;
     printf("enter the no of students");
-    scanf("%d",&size)
+    scanf("%d",&size);
 
     for (int i = 0; i < size; i++)
     {
@@ -24,7 +24,7 @@ int main(){
     
     for (int i = 0; i < size-1; i++)
     {
-        if (strcmp(students[i].name>students[i+1])>0)
+        if (strcmp(students[i].name,students[i+1].name)>0)
         {
           temp[i]=students[i];
           students[i]=students[i+1];
@@ -34,7 +34,7 @@ int main(){
     }
 
     //printing
-    printf("roll no\t name")
+    printf("roll no\t name");
     for (int  i = 0; i < size; i++)
     {
         printf("%d\t%d",students[i].rollNo,students[i].name);

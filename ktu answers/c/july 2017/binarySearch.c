@@ -1,7 +1,7 @@
 /* 22.a */
 #include <stdio.h>
 
-int binarySearch(int[],int);
+int binarySearch(int[],int,int,int);
 
 int main(){
     int arr[100];
