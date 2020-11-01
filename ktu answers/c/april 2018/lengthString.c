@@ -19,6 +19,6 @@ int len(char* str)
         return 0; 
     }
     else{
-        return 1 + recLen(str + 1);  
+        return 1 + len(str + 1);  
     }
 } 
