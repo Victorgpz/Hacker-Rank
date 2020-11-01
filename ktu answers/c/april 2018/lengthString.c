@@ -12,7 +12,7 @@ int main(){
 
 }
 
-int recLen(char* str)     
+int len(char* str)     
 { 
 
     if (*str == '\0'){ //check if we reach at the end of the string 
