@@ -1,4 +1,5 @@
-/* 21.a binary search*/
+//22.b 
+
 #include <stdio.h>
 
 int binarySearch(int[],int,int,int);
