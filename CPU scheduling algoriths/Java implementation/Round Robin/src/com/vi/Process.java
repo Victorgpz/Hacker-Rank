@@ -1,7 +1,7 @@
 package com.vi;
 
 public class Process {
-    private String  processId;
+    private String processId;
     private int burstTime;
 
     public Process(String processId, int burstTime) {

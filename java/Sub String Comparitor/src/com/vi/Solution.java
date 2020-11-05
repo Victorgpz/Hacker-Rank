@@ -5,8 +5,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
 
 public class Solution {
-    public static String twoStrings(@NotNull String s1,@NotNull String s2){
-            //too slow,failed some test cases
+    public static String twoStrings(@NotNull String s1, @NotNull String s2) {
+        //too slow,failed some test cases
 
 //      boolean flag=false;
 //        for (int i=0;i<s1.length();i++){
@@ -26,18 +26,18 @@ public class Solution {
 //            return "YES";
 //        }else {
 //            return "NO";
-        HashSet<Character> h1=new HashSet<>();
-        HashSet<Character> h2=new HashSet<>();
-        for (int i=0;i<s1.length();i++){
+        HashSet<Character> h1 = new HashSet<>();
+        HashSet<Character> h2 = new HashSet<>();
+        for (int i = 0; i < s1.length(); i++) {
             h1.add(s1.charAt(i));
-       }
-        for (int i=0;i<s2.length();i++){
+        }
+        for (int i = 0; i < s2.length(); i++) {
             h2.add(s2.charAt(i));
         }
         h1.retainAll(h2);
-        if(h1.isEmpty()){
+        if (h1.isEmpty()) {
             return "NO";
-        }else {
+        } else {
             return "YES";
         }
 

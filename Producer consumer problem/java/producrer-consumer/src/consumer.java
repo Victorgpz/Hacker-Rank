@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class consumer implements Runnable{
+public class consumer implements Runnable {
     public List<String> buffer;
 
     public consumer(List<String> buffer) {

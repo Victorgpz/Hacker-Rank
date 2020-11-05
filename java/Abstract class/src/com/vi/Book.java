@@ -2,8 +2,10 @@ package com.vi;
 
 public abstract class Book {
     String title;
+
     abstract void setTitle(String s);
-    String getTitle(){
+
+    String getTitle() {
         return title;
     }
 
