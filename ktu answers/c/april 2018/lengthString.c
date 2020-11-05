@@ -12,13 +12,13 @@ int main(){
 
 }
 
-int recLen(char* str)     
+int len(char* str)     
 { 
 
     if (*str == '\0'){ //check if we reach at the end of the string 
         return 0; 
     }
     else{
-        return 1 + recLen(str + 1);  
+        return 1 + len(str + 1);  
     }
 } 
