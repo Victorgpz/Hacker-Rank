@@ -13,10 +13,10 @@ class Student
         cout<<"enter roll number :";
         cin>>rollno;
 
-        cout<<"Enter age";
+        cout<<"Enter age :";
         cin>>age;
 
-        cout<<"Enter your name";
+        cout<<"Enter your name :";
         cin>>name;
     }
 };
