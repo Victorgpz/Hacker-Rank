@@ -25,9 +25,9 @@ class StudentDetails : public Student {
 public:
 
    void printInfo() {
-       cout << "Your Roll is :" << rollno;
-       cout << "\nYour Name is :" << age;
-       cout << "\nCollege Name is :" << name;
+       cout << "Roll NO :" << rollno;
+       cout << "\nAge :" << age;
+       cout << "\nName :" << name;
    }
 };
 
