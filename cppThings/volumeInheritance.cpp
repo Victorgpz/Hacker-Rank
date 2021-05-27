@@ -4,26 +4,44 @@
 using namespace std;
 
 class Circle{
+    protected:
+        double radius;
     public:
-        int radius;
+    void init_radius(double);
     double area(){
+        // std::cout<<" circle area :"<<M_PI*pow(radius,2)<<"\n";
             return M_PI*pow(radius,2); 
     }
 
 };
+void Circle::init_radius(double a){
+    radius = a;
+}
+
+//cylinder
 
 class Cylinder : public Circle{
+    protected:
+        double height;
     public:
-        int height;
-    double volume(){
-            return Circle::area()*height;
-    }
+    void init_height(double);
+    double volume();
 };
+
+void Cylinder::init_height (double a){
+    height = a;
+}
+
+double Cylinder::volume(){
+    //std::cout<<Circle::area()<<"\n";
+    return Circle::area()*height;
+}
 
 class Cone :public Cylinder{
     public:
         //volume =pi*r^2(h/3)
     double volume(){
+            //std::cout<<"area :"<<Circle::area();
             return Circle::area()*(height/3);
             
     }
@@ -39,7 +57,7 @@ class Sphere :public Circle{
 
 
 int main(){
-    int radi,height;
+    double radi,height;
     Circle circle;
     Cylinder cylinder;
     Cone cone;
@@ -49,15 +67,20 @@ int main(){
 
     cout<<"enter the radi: ";
     cin>>radi;
-    circle.radius=radi;
+    circle.init_radius(radi);
+    cylinder.init_radius(radi);
+    cone.init_radius(radi);
+    sphere.init_radius(radi);
 
-    cout<<"enter the height";
+    cout<<"enter the height: ";
     cin>>height;
-    cylinder.height=height;
+    cylinder.init_height(height);
+    cone.init_height(height);
 
-    cout<<"Volume of Cylinder :"<<cylinder.volume();
-    cout<<"Volume of Cone :"<<cone.volume();
-    cout<<"Volume of Sphere :"<<sphere.volume();
+    cout<<"area of circle :"<<circle.area()<<"\n";
+    cout<<"Volume of Cylinder :"<<cylinder.volume()<<"\n";
+    cout<<"Volume of Cone :"<<cone.volume()<<"\n";
+    cout<<"Volume of Sphere :"<<sphere.volume()<<"\n";
 
     
     return 0;
