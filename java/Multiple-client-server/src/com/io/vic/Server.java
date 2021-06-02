@@ -11,8 +11,13 @@ public class Server {
     private static ServerSocket socket;
     private static Socket client;
 
+<<<<<<< HEAD
   //  private static ArrayList<ClientHandler> clientHandlers;
     private static ExecutorService executorServices = Executors.newFixedThreadPool(5);
+=======
+    private static ArrayList<ClientHandler> clientHandlers;
+    private static ExecutorService executorServicepool= Executors.newFixedThreadPool(5);
+>>>>>>> master
 
     public static void main(String[] args) {
      //   clientHandlers=new ArrayList<>();
